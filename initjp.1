@@ -1,0 +1,36 @@
+.Dd March 12, 2017
+.Dt initjp 1
+.Os
+.Sh NAME
+.Nm initjp
+.Nd initialize a java project
+.Sh SYNOPSIS
+.Nm initjp
+.Oo
+.Fl m
+.Op Fl ig
+.Oc
+.Nm initjp
+.Oo
+.Fl ig
+.Oc
+.Ar repo_name
+.Sh DESCRIPTION
+The command performs the housekeeping operations required to initialize a Java Maven project and/or a local git repository and/or a remote git repository.
+.Pp
+The following options are available:
+.Bl -tag -width flag
+.It Fl m
+Initializes a Java Maven project in the current directory. You will be asked to input the following Maven properties: project groupId, project artifactId, project main class and the maven archetype used to create the project. The project main class may be left blank. The script creates a folder in the current directory named after the project artifactId and runs 
+.Nm mvn
+inside the project directory. The available archetypes currently are preconfigured in the script source code.
+.It Fl i
+Initializes a local git repository in the current folder. A .gitignore file tuned for Maven projects and a GitHub LICENSE file (MIT) are also added. Then the command makes the first commit to the local repo. If the 
+.Fl m
+option was specified, git is run inside the newly created project directory. 
+.It Fl g
+Initializes a remote git repository under my GitHub account (it will prompt for the account password). If the 
+.Fl m
+option was specified, the remote repository is named after the Maven artifactId property. Otherwise you must specify the 
+.Ar repo_name
+argument.

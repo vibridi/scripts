@@ -76,28 +76,39 @@ if $DO_CREATE_MVN_PROJ; then
 	echo "	[3] maven-archetype-webapp"
 	echo "	[4] java8-archetype"
 	echo "	[5] fxml-app-archetype"
+	echo "	[6] pom-root"
 	echo -n "Archetype number: "
 	read ARCHETYPE_NUMBER
 
 	case $ARCHETYPE_NUMBER in
 		1)
 			ARCH_GROUPID="org.apache.maven.archetypes"
-			ARCH_ARTIFACTID="maven-archetype-archetype";;
+			ARCH_ARTIFACTID="maven-archetype-archetype"
+			;;
 		2)
 			ARCH_GROUPID="org.apache.maven.archetypes"
-			ARCH_ARTIFACTID="maven-archetype-quickstart";;
+			ARCH_ARTIFACTID="maven-archetype-quickstart"
+			;;
 		3)
 			ARCH_GROUPID="org.apache.maven.archetypes"
-			ARCH_ARTIFACTID="maven-archetype-webapp";;
+			ARCH_ARTIFACTID="maven-archetype-webapp"
+			;;
 		4)
 			ARCH_GROUPID="com.vibridi"
-			ARCH_ARTIFACTID="java8-archetype";;
+			ARCH_ARTIFACTID="java8-archetype"
+			;;
 		5)
 			ARCH_GROUPID="com.vibridi"
-			ARCH_ARTIFACTID="fxml-app-archetype";;
+			ARCH_ARTIFACTID="fxml-app-archetype"
+			;;
+		6)
+			ARCH_GROUPID="org.codehaus.mojo.archetypes"
+			ARCH_ARTIFACTID="pom-root"
+			;;
 		*)
 			echo "Invalid archetype"
-			exit 1;;
+			exit 1
+			;;
 	esac
 
 	PROJ_PACKAGE="$PROJ_GROUPID.${PROJ_ARTIFACTID//-/.}"
