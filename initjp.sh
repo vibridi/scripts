@@ -75,7 +75,7 @@ if $DO_CREATE_MVN_PROJ; then
 	echo "	[2] maven-archetype-quickstart"
 	echo "	[3] maven-archetype-webapp"
 	echo "	[4] java8-archetype"
-	echo "	[5] fxml-app-archetype"
+	echo "	[5] javafx-archetype"
 	echo "	[6] pom-root"
 	echo -n "Archetype number: "
 	read ARCHETYPE_NUMBER
@@ -99,7 +99,7 @@ if $DO_CREATE_MVN_PROJ; then
 			;;
 		5)
 			ARCH_GROUPID="com.vibridi"
-			ARCH_ARTIFACTID="fxml-app-archetype"
+			ARCH_ARTIFACTID="javafx-archetype"
 			;;
 		6)
 			ARCH_GROUPID="org.codehaus.mojo.archetypes"
