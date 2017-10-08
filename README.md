@@ -21,12 +21,12 @@ Create a maven project
 
 The script will ask you to input the `groupId`, `artifactId` and the name of the main class.
 Then it will ask what maven archetype to use, from the following:
-[1] maven-archetype-archetype
-[2] maven-archetype-quickstart
-[3] maven-archetype-webapp
-[4] java8-archetype
-[5] javafx-archetype
-[6] pom-root
+- [1] maven-archetype-archetype
+- [2] maven-archetype-quickstart
+- [3] maven-archetype-webapp
+- [4] java8-archetype
+- [5] javafx-archetype
+- [6] pom-root
  
 The script is currently customized to work with a few archetypes that I have in my local system, namely java8-archetype and [javafx-archetype](https://github.com/vibridi/javafx-archetype)). You can easily adapt it to your specific needs. 
 
