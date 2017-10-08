@@ -2,7 +2,7 @@
 
 These are bash scripts for automating common tasks.
 This folder includes:
-- **initjp.sh** a script for setting up projects
+- **initjp** a script for setting up projects
 - **tronco** a scripts for managing credentials with GPG
 
 
